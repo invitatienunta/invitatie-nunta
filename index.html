@@ -264,10 +264,10 @@ document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
       mode: 'no-cors', 
       body: JSON.stringify(data)
     });
-    message.textContent = 'Thank you for your RSVP!';
+    message.textContent = 'Multumim de confirmare !';
     e.target.reset();
   } catch (error) {
-    message.textContent = 'Error submitting. Please try again.';
+    message.textContent = 'Ceva nu a mers, incerca din nou.';
     console.error(error);
   }
 });
