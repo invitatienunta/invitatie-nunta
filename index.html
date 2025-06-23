@@ -89,9 +89,9 @@
 							<h1>Mădălina &amp; Claudiu</h1>
 							<br>
 							<img src="images/fprint.png" alt="Mădălina + Claudiu"> 
-							<h2 class="h233">01 Noiembrie 2025</h2>
-							<h2 class="h233">Alături de părinții noștri <br> Elena Mădălina & Ion Păuna      |   Dorina & Irinel Lihu </h2>
-							<h2 class="h233">și<br>Alături de nașii noștri<br> Alexandra și Damian Nicoară</h2>
+							<h2 class="scrismic">01 Noiembrie 2025</h2>
+							<h2 class="scrismic">Alături de părinții noștri <br> Elena Mădălina & Ion Păuna      |   Dorina & Irinel Lihu </h2>
+							<h2 class="scrismic">și<br>Alături de nașii noștri<br> Alexandra și Damian Nicoară</h2>
 							<div class="flipTimebox">
 								<div class="clock clock-fix"></div>
 							  </div>
@@ -249,29 +249,29 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script type="text/javascript">
-		document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const data = {
-    name: formData.get('name'),
-    attending: formData.get('attending'),
-    meal: formData.get('meal') || 'None'
+	document.getElementById('rsvp-form').addEventListener('submit', async (e) => {
+   e.preventDefault();
+   const formData = new FormData(e.target);
+   const data = {
+   name: formData.get('name'),
+   attending: formData.get('attending'),
+   meal: formData.get('meal') || 'None'
   };
   const message = document.getElementById('message');
   try {
-    const response = await fetch('https://script.google.com/macros/s/AKfycbwstUvjkG9oR15AsfXk77hnvdt6o9HejGFFZwM2pbQLyLMNXoHP01LBfAfWBUn-N3IK/exec', {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbyslzhOFwqBqkm0RU57hmTSPBGOQFBb9888mScVkkw-KVKiLlpgJi7D95TVO1K9HUwu/exec', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: { 'Content-Type': 'application/json' }
     });
     if (response.ok) {
-      message.textContent = 'Thank you!';
+      message.textContent = 'Thank you for your RSVP!';
       e.target.reset();
     } else {
-      message.textContent = 'Error submitting . Please try again.';
+      message.textContent = 'Error submitting. Please try again.';
     }
   } catch (error) {
-    message.textContent = 'Error submitting . Please try again.';
+    message.textContent = 'Error submitting. Please try again.';
   }
 });
 	</script>
