@@ -113,13 +113,10 @@
   .flipTimebox .flip-clock-dot {
     margin-left: -10px;
   }
-  .flipTimebox {
-    margin: 50px 0 100px 20px;
-  }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
   .flipTimebox .flip-clock-divider .flip-clock-label {
-    font-size: 1em;
+    font-size: 0.8em;
     width: 3px;
   }
   .flipTimebox .flip-clock-divider.days .flip-clock-label {
