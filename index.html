@@ -105,19 +105,19 @@
                 <img src="images/fprint.png" alt="Mădălina + Claudiu" />
                 <h2 class="scrismic">01 Noiembrie 2025</h2>
                 <h2 class="scrismic">
-                  Alaturi de parintii nostri <br />
-                  Elena Madalina & Ion Pauna | Dorina & Irinel Lihu
+                  Alături de părinții noștri <br />
+                  Elena Mădălina & Ion Păuna | Dorina & Irinel Lihu
                 </h2>
                 <h2 class="scrismic">
-                  și<br />Alaturi de nasii nostri<br />
-                  Alexandra și Damian Nicoara
+                  și<br />Alături de nașii noștri<br />
+                  Alexandra și Damian Nicoară
                 </h2>
                 <div class="flipTimebox text-center">
                   <div class="clock clock-fix"></div>
                 </div>
                 <p>
                   <a href="#formcontainer" class="btn btn-default btn-sm"
-                    >Save our date</a
+                    >Confirmați prezența</a
                   >
                 </p>
               </div>
@@ -205,39 +205,30 @@
           </div>
         </div>
         <div class="row row-bottom-padded-md">
-          <div class="col-md-12">
-            <ul id="fh5co-gallery-list">
-              <li
-                class="one-third animate-box"
-                data-animate-effect="fadeIn"
-                style="background-image: url(images/clau4.jpg)"
-              >
-                <a href="images/clau4.jpg">
-                  <div class="case-studies-summary"></div>
-                </a>
-              </li>
+  <div class="col-md-12 text-center">
+    <ul id="fh5co-gallery-list" style="padding-left: 0; list-style: none;">
+      <li
+        class="animate-box"
+        data-animate-effect="fadeIn"
+        style="
+          display: inline-block;
+          width: 100%;
+          max-width: 600px;
+          height: 400px;
+          margin: 0 auto;
+          background-image: url(images/clau4.jpg);
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <a href="images/clau4.jpg" style="display: block; width: 100%; height: 100%;">
+          <div class="case-studies-summary"></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 
-              <li
-                class="one-third animate-box"
-                data-animate-effect="fadeIn"
-                style="background-image: url(images/clau3.jpg)"
-              >
-                <a href="images/clau3.jpg">
-                  <div class="case-studies-summary"></div>
-                </a>
-              </li>
-              <li
-                class="one-third animate-box"
-                data-animate-effect="fadeIn"
-                style="background-image: url(images/clau2.jpg)"
-              >
-                <a href="images/clau2.jpg">
-                  <div class="case-studies-summary"></div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
     <div class="gototop js-top">
@@ -248,17 +239,14 @@
         <div class="text-center">
           <div class="container form-group" id="formcontainer">
             <h2 class="col-md text-center fh5co-heading animate-box">
-              Ne casatorim
+              Ne căsătorim!
             </h2>
-            <p class="col-md text-center fh5co-heading animate-box">
-              Confirmati prezenta mai jos etc
-            </p>
             <form
               id="rsvp-form"
               class="form-group row text-center fh5co-heading animate-box"
             >
               <label class="col-md">
-                Numarul de persoane:
+                Numărul de persoane:
                 <br />
                 <input
                   type="number"
@@ -272,7 +260,7 @@
               <br />
               <br />
               <label class="col-md">
-                Numele tau:
+                Numele tău:
                 <br />
                 <input
                   type="text"
@@ -287,7 +275,7 @@
               <div id="additional-inputs">
                 <div id="extra-names"></div>
                 <label class="col-md">
-                  Numarul de copii:
+                  Numărul de copii:
                   <br />
                   <input
                     type="number"
@@ -304,7 +292,7 @@
               </div>
               <br />
               <button type="submit" class="btn btn-primary col-md">
-                Confirma!
+                Confirmă!
               </button>
             </form>
             <p id="message"></p>
@@ -362,7 +350,7 @@
           const label = document.createElement("label");
           label.classList.add("extra-name-label");
           label.classList.add("col-md");
-          label.innerHTML = `A doua persoana:
+          label.innerHTML = `A doua persoană:
 	<br />
 	<input type="text" name="extra_name" required class="underline-input"/>
 	<br />
