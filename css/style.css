@@ -1530,8 +1530,9 @@ form label {
   border: 2px solid #646464;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #f366a3 !important;
-  border-color: #f366a3 !important;
+  background: #fff !important;
+  border-color: #646464 !important;
+  color: #646464;
 }
 .btn-primary.btn-outline {
   background: transparent;
@@ -1709,4 +1710,22 @@ body {
 }
 #fh5co-counter .event-wrap, #fh5co-event .event-wrap {
   padding: 0px;
+}
+@media (min-width: 768px) {
+    .form-container2 {
+        width: 100% !important;
+    }
+}
+.underline-input {
+  border: none;              /* Removes all borders */
+  border-bottom: 2px solid #646464;  /* Adds only bottom border */
+  outline: none;             /* Removes default outline on focus */
+  background: transparent;   /* Optional: makes background clear */
+  text-align: center;
+}
+.underline-input:focus {
+  border-bottom:4px solid #000; /* Changes color on focus */
+}
+.underline-input.invalid {
+  border-bottom-color: red;
 }
