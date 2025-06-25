@@ -247,17 +247,16 @@
       <div class="row">
         <div class="text-center">
           <div class="container form-group" id="formcontainer">
-            <h2
-              class="col-md text-center fh5co-heading animate-box"
-            >
+            <h2 class="col-md text-center fh5co-heading animate-box">
               Ne casatorim
             </h2>
-            <p
-              class="col-md text-center fh5co-heading animate-box"
-            >
+            <p class="col-md text-center fh5co-heading animate-box">
               Confirmati prezenta mai jos etc
             </p>
-            <form id="rsvp-form" class="form-group row text-center fh5co-heading animate-box">
+            <form
+              id="rsvp-form"
+              class="form-group row text-center fh5co-heading animate-box"
+            >
               <label class="col-md">
                 Numarul de persoane:
                 <br />
@@ -267,18 +266,24 @@
                   min="0"
                   value="0"
                   required
-				  class="underline-input"
+                  class="underline-input"
                 />
               </label>
               <br />
-			  <br />
+              <br />
               <label class="col-md">
                 Numele tau:
                 <br />
-                <input type="text" id="nameInput" name="name" required class="underline-input" />
+                <input
+                  type="text"
+                  id="nameInput"
+                  name="name"
+                  required
+                  class="underline-input"
+                />
               </label>
-			  <br />
-			  <br />
+              <br />
+              <br />
               <div id="additional-inputs">
                 <div id="extra-names"></div>
                 <label class="col-md">
@@ -290,11 +295,11 @@
                     min="0"
                     value="0"
                     required
-					class="underline-input"
+                    class="underline-input"
                   />
                 </label>
                 <br />
-				<br />
+                <br />
                 <div id="kids-menu" class="col-md"></div>
               </div>
               <br />
@@ -312,7 +317,7 @@
         <p>&copy; 2025 Mădălina & Claudiu</p>
       </footer>
     </div>
-	
+
     <script src="js/jquery.min.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
@@ -337,24 +342,21 @@
       const extraNamesDiv = document.getElementById("extra-names");
       const kidsMenuDiv = document.getElementById("kids-menu");
       const additionalInputsDiv = document.getElementById("additional-inputs");
-	  const nameInput = document.getElementById('nameInput');
+      const nameInput = document.getElementById("nameInput");
 
-nameInput.addEventListener('input', () => {
-  const hasNumber = /\d/.test(nameInput.value);
-  if (hasNumber) {
-    nameInput.classList.add('invalid');
-  } else {
-    nameInput.classList.remove('invalid');
-  }
-});
+      nameInput.addEventListener("input", () => {
+        const hasNumber = /\d/.test(nameInput.value);
+        if (hasNumber) {
+          nameInput.classList.add("invalid");
+        } else {
+          nameInput.classList.remove("invalid");
+        }
+      });
 
       function updateFormInputs() {
         const numPersons = parseInt(numPersonsInput.value) || 0;
 
-        // Show/hide additional inputs (extra name, Number of Kids, Kids Menu) for num_persons >= 2
         additionalInputsDiv.style.display = numPersons >= 2 ? "block" : "none";
-
-        // Update extra names (only one input for num_persons >= 2)
         extraNamesDiv.innerHTML = "";
         if (numPersons >= 2) {
           const label = document.createElement("label");
@@ -383,8 +385,8 @@ nameInput.addEventListener('input', () => {
           label.innerHTML = `
       Meniu pentru copii:
       <select name="kids_menu" required">
-        <option value="Yes">Da</option>
-        <option value="No">Nu</option>
+        <option value="Da">Da</option>
+        <option value="Nu">Nu</option>
       </select>
     `;
           kidsMenuDiv.appendChild(label);
@@ -400,18 +402,18 @@ nameInput.addEventListener('input', () => {
         const data = {
           name: formData.get("name"),
           num_persons: parseInt(formData.get("num_persons")) || 0,
-          extra_name: formData.get("extra_name") || "None",
+          extra_name: formData.get("extra_name") || "Fara",
           num_kids: parseInt(formData.get("num_kids")) || 0,
-          kids_menu: formData.get("kids_menu") || "None",
+          kids_menu: formData.get("kids_menu") || "Fara",
         };
-        // Log data for debugging
+
         console.log("Sending data:", data);
 
         const message = document.getElementById("message");
         message.classList.add("col-md");
         try {
           await fetch(
-            "https://script.google.com/macros/s/AKfycbxo4CVzVfzLOkL1RY7CcAhOipHb8BSgWUvalYTsXYN0yFPn0ydBe9MZea_OIrWLqKiM/exec",
+            "https://script.google.com/macros/s/AKfycbzf5W6csPbiPyXKEb_wst7ymVsgJ2lGWspGW3YH3z7jI_mBDL5aqkzu0-SV2S1AJMbR/exec",
             {
               method: "POST",
               mode: "no-cors",
@@ -429,8 +431,6 @@ nameInput.addEventListener('input', () => {
           console.error("Fetch error:", error);
         }
       });
-
-      // Initialize form
       updateFormInputs();
     </script>
   </body>
